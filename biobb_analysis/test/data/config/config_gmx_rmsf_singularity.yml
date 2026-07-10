@@ -1,11 +1,5 @@
 properties:
-  bfactor: false
-  bin_width: 0.1
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
-  demean: true
-  hist: false
-  mass_weighted: false
-  nofit: false
   selection: System

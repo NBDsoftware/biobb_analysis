@@ -89,7 +89,7 @@ class GMXImage(BiobbObject):
         self.cluster_selection = properties.get('cluster_selection', "System")
         self.output_selection = properties.get('output_selection', "System")
         self.pbc = properties.get('pbc', "mol")
-        self.center = properties.get('dista', True)
+        self.center = properties.get('center', True)
         self.ur = properties.get('ur', "compact")
         self.fit = properties.get('fit', "none")
         self.properties = properties

@@ -40,21 +40,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_average.yml)
 ```python
@@ -69,7 +69,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_average_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -82,7 +82,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_average_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -119,7 +119,7 @@ cpptraj_average --config config_cpptraj_average.yml --input_top_path cpptraj.par
     "mask": "c-alpha",
     "format": "pdb",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -134,7 +134,7 @@ cpptraj_average --config config_cpptraj_average.yml --input_top_path cpptraj.par
     "mask": "c-alpha",
     "format": "pdb",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -183,21 +183,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing.
-* **end** (*integer*): (-1) Ending frame for slicing.
-* **steps** (*integer*): (1) Step for slicing.
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **reference** (*string*): (first) Reference definition. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing
+* **end** (*integer*): (-1) Ending frame for slicing
+* **steps** (*integer*): (1) Step for slicing
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **reference** (*string*): (first) Reference definition. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_bfactor.yml)
 ```python
@@ -265,21 +265,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing.
-* **end** (*integer*): (-1) Ending frame for slicing.
-* **steps** (*integer*): (1) Step for slicing.
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing
+* **end** (*integer*): (-1) Ending frame for slicing
+* **steps** (*integer*): (1) Step for slicing
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_convert.yml)
 ```python
@@ -294,7 +294,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_convert_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -307,7 +307,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_convert_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -344,7 +344,7 @@ cpptraj_convert --config config_cpptraj_convert.yml --input_top_path cpptraj.par
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -359,7 +359,7 @@ cpptraj_convert --config config_cpptraj_convert.yml --input_top_path cpptraj.par
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -403,21 +403,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_dry.yml)
 ```python
@@ -432,7 +432,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_dry_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -445,7 +445,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_dry_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -482,7 +482,7 @@ cpptraj_dry --config config_cpptraj_dry.yml --input_top_path cpptraj.parm.top --
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -497,7 +497,7 @@ cpptraj_dry --config config_cpptraj_dry.yml --input_top_path cpptraj.parm.top --
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -541,21 +541,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_image.yml)
 ```python
@@ -570,7 +570,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_image_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -583,7 +583,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_image_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -620,7 +620,7 @@ cpptraj_image --config config_cpptraj_image.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -635,7 +635,7 @@ cpptraj_image --config config_cpptraj_image.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -679,21 +679,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_mask.yml)
 ```python
@@ -708,7 +708,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_mask_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -721,7 +721,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_mask_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -758,7 +758,7 @@ cpptraj_mask --config config_cpptraj_mask.yml --input_top_path cpptraj.parm.top 
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -773,7 +773,7 @@ cpptraj_mask --config config_cpptraj_mask.yml --input_top_path cpptraj.parm.top 
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -817,20 +817,20 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_rgyr.yml)
 ```python
@@ -844,7 +844,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_rgyr_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -856,7 +856,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_rgyr_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -890,7 +890,7 @@ cpptraj_rgyr --config config_cpptraj_rgyr.yml --input_top_path cpptraj.parm.top 
     "steps": 1,
     "mask": "c-alpha",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -904,7 +904,7 @@ cpptraj_rgyr --config config_cpptraj_rgyr.yml --input_top_path cpptraj.parm.top 
     "steps": 1,
     "mask": "c-alpha",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -956,24 +956,24 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing.
-* **end** (*integer*): (-1) Ending frame for slicing.
-* **steps** (*integer*): (1) Step for slicing.
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **reference** (*string*): (first) Reference definition. .
-* **nofit** (*boolean*): (False) Do not perform best-fit RMSD.
-* **norotate** (*boolean*): (False) Translate but do not rotate coordinates.
-* **nomod** (*boolean*): (False) Do not modify coordinates.
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing
+* **end** (*integer*): (-1) Ending frame for slicing
+* **steps** (*integer*): (1) Step for slicing
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **reference** (*string*): (first) Reference definition. 
+* **nofit** (*boolean*): (False) Do not perform best-fit RMSD
+* **norotate** (*boolean*): (False) Translate but do not rotate coordinates
+* **nomod** (*boolean*): (False) Do not modify coordinates
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_rms.yml)
 ```python
@@ -1046,21 +1046,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing.
-* **end** (*integer*): (-1) Ending frame for slicing.
-* **steps** (*integer*): (1) Step for slicing.
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **reference** (*string*): (first) Reference definition. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing
+* **end** (*integer*): (-1) Ending frame for slicing
+* **steps** (*integer*): (1) Step for slicing
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **reference** (*string*): (first) Reference definition. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_rmsf.yml)
 ```python
@@ -1128,21 +1128,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_slice.yml)
 ```python
@@ -1157,7 +1157,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_slice_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: 20
@@ -1170,7 +1170,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_slice_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: 20
@@ -1207,7 +1207,7 @@ cpptraj_slice --config config_cpptraj_slice.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1222,7 +1222,7 @@ cpptraj_slice --config config_cpptraj_slice.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1266,19 +1266,19 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **snapshot** (*integer*): (1) Frame to be captured for snapshot.
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **snapshot** (*integer*): (1) Frame to be captured for snapshot
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_snapshot.yml)
 ```python
@@ -1291,7 +1291,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_snapshot_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   format: pdb
@@ -1302,7 +1302,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_snapshot_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   format: pdb
@@ -1333,7 +1333,7 @@ cpptraj_snapshot --config config_cpptraj_snapshot.yml --input_top_path cpptraj.p
     "mask": "c-alpha",
     "format": "pdb",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1346,7 +1346,7 @@ cpptraj_snapshot --config config_cpptraj_snapshot.yml --input_top_path cpptraj.p
     "mask": "c-alpha",
     "format": "pdb",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1390,21 +1390,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **start** (*integer*): (1) Starting frame for slicing..
-* **end** (*integer*): (-1) Ending frame for slicing..
-* **steps** (*integer*): (1) Step for slicing..
-* **mask** (*string*): (all-atoms) Mask definition. .
-* **format** (*string*): (netcdf) Output trajectory format. .
-* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **start** (*integer*): (1) Starting frame for slicing.
+* **end** (*integer*): (-1) Ending frame for slicing.
+* **steps** (*integer*): (1) Step for slicing.
+* **mask** (*string*): (all-atoms) Mask definition. 
+* **format** (*string*): (netcdf) Output trajectory format. 
+* **binary_path** (*string*): (cpptraj) Path to the cpptraj executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (afandiadib/ambertools:serial) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_strip.yml)
 ```python
@@ -1419,7 +1419,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_strip_docker.yml)
 ```python
 properties:
-  container_image: afandiadib/ambertools:serial
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_volume_path: /tmp
   end: -1
@@ -1432,7 +1432,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_cpptraj_strip_singularity.yml)
 ```python
 properties:
-  container_image: shub://bioexcel/ambertools_singularity
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   end: -1
@@ -1469,7 +1469,7 @@ cpptraj_strip --config config_cpptraj_strip.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "docker",
-    "container_image": "afandiadib/ambertools:serial",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1484,7 +1484,7 @@ cpptraj_strip --config config_cpptraj_strip.yml --input_top_path cpptraj.parm.to
     "mask": "c-alpha",
     "format": "netcdf",
     "container_path": "singularity",
-    "container_image": "shub://bioexcel/ambertools_singularity",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1501,7 +1501,36 @@ Command:
 ```python
 gmx_check -h
 ```
-    /bin/sh: 1: gmx_check: not found
+    usage: gmx_check [-h] [-c CONFIG] [--input_structure_path INPUT_STRUCTURE_PATH] [--input_structure_2_path INPUT_STRUCTURE_2_PATH] [--input_traj_path INPUT_TRAJ_PATH] [--input_traj_2_path INPUT_TRAJ_2_PATH] [--input_energy_path INPUT_ENERGY_PATH] [--input_energy_2_path INPUT_ENERGY_2_PATH] [--structure_check_path STRUCTURE_CHECK_PATH] [--input_index_path INPUT_INDEX_PATH] -o OUTPUT_LOG_PATH
+    
+    Checks and compares GROMACS topology, trajectory or energy files.
+    
+    options:
+      -h, --help            show this help message and exit
+      -c CONFIG, --config CONFIG
+                            This file can be a YAML file, JSON file or JSON string
+    
+    required arguments:
+      -o OUTPUT_LOG_PATH, --output_log_path OUTPUT_LOG_PATH
+                            Path to the text file storing the gmx check console output. Accepted formats: txt, log, out.
+    
+    optional arguments:
+      --input_structure_path INPUT_STRUCTURE_PATH
+                            Path to the first GROMACS run input file. Accepted formats: tpr, gro, g96, pdb, brk, ent.
+      --input_structure_2_path INPUT_STRUCTURE_2_PATH
+                            Path to the second GROMACS run input file. Accepted formats: tpr, gro, g96, pdb, brk, ent.
+      --input_traj_path INPUT_TRAJ_PATH
+                            Path to the first GROMACS trajectory file. Accepted formats: xtc, trr, cpt, gro, g96, pdb, tng.
+      --input_traj_2_path INPUT_TRAJ_2_PATH
+                            Path to the second GROMACS trajectory file. Accepted formats: xtc, trr, cpt, gro, g96, pdb, tng.
+      --input_energy_path INPUT_ENERGY_PATH
+                            Path to the first GROMACS energy file. Accepted formats: edr.
+      --input_energy_2_path INPUT_ENERGY_2_PATH
+                            Path to the second GROMACS energy file. Accepted formats: edr.
+      --structure_check_path STRUCTURE_CHECK_PATH
+                            Path to the structure file to analyze for internal consistency. Accepted formats: tpr, gro, g96, pdb, brk, ent.
+      --input_index_path INPUT_INDEX_PATH
+                            Path to the GROMACS index file. Accepted formats: ndx.
 ### I / O Arguments
 Syntax: input_argument (datatype) : Definition
 
@@ -1519,24 +1548,24 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **vdwfac** (*number*): (0.8) Fraction of the sum of Van der Waals radii used as warning cutoff..
-* **bonlo** (*number*): (0.4) Minimum fraction of the sum of Van der Waals radii for bonded atoms..
-* **bonhi** (*number*): (0.7) Maximum fraction of the sum of Van der Waals radii for bonded atoms..
-* **relative_tolerance** (*number*): (0.001) Relative tolerance for comparing real values..
-* **absolute_tolerance** (*number*): (0.001) Absolute tolerance, useful when sums are close to zero..
-* **rmsd** (*boolean*): (False) Print RMSD for coordinates, velocities and forces..
-* **compare_ab** (*boolean*): (False) Compare the A and B topologies from a single input file..
-* **last_energy_term** (*string*): (None) Last energy term to compare..
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **vdwfac** (*number*): (0.8) Fraction of the sum of Van der Waals radii used as warning cutoff.
+* **bonlo** (*number*): (0.4) Minimum fraction of the sum of Van der Waals radii for bonded atoms.
+* **bonhi** (*number*): (0.7) Maximum fraction of the sum of Van der Waals radii for bonded atoms.
+* **relative_tolerance** (*number*): (0.001) Relative tolerance for comparing real values.
+* **absolute_tolerance** (*number*): (0.001) Absolute tolerance, useful when sums are close to zero.
+* **rmsd** (*boolean*): (False) Print RMSD for coordinates, velocities and forces.
+* **compare_ab** (*boolean*): (False) Compare the A and B topologies from a single input file.
+* **last_energy_term** (*string*): (None) Last energy term to compare.
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 ### JSON
 
@@ -1588,22 +1617,22 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **fit_selection** (*string*): (System) Group where the fitting will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **output_selection** (*string*): (System) Group that is going to be written in the output trajectory. If **input_index_path** provided, check the file for the accepted values. .
-* **dista** (*boolean*): (False) Use RMSD of distances instead of RMS deviation..
-* **nofit** (*boolean*): (False) Do not use least squares fitting before RMSD calculation..
-* **method** (*string*): (linkage) Method for cluster determination. .
-* **cutoff** (*number*): (0.1) RMSD cut-off (nm) for two structures to be neighbor..
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **fit_selection** (*string*): (System) Group where the fitting will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **output_selection** (*string*): (System) Group that is going to be written in the output trajectory. If **input_index_path** provided, check the file for the accepted values. 
+* **dista** (*boolean*): (False) Use RMSD of distances instead of RMS deviation.
+* **nofit** (*boolean*): (False) Do not use least squares fitting before RMSD calculation.
+* **method** (*string*): (linkage) Method for cluster determination. 
+* **cutoff** (*number*): (0.1) RMSD cut-off (nm) for two structures to be neighbor.
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_cluster.yml)
 ```python
@@ -1618,7 +1647,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_cluster_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -1632,7 +1661,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_cluster_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   cutoff: 0.1
@@ -1669,7 +1698,7 @@ gmx_cluster --config config_gmx_cluster.yml --input_structure_path topology.tpr 
     "method": "linkage",
     "cutoff": 0.1,
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -1685,7 +1714,7 @@ gmx_cluster --config config_gmx_cluster.yml --input_structure_path topology.tpr 
     "method": "linkage",
     "cutoff": 0.1,
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1726,18 +1755,18 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **xvg** (*string*): (none) XVG plot formatting. .
-* **terms** (*array*): ([Potential]) Energy terms. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **xvg** (*string*): (none) XVG plot formatting. 
+* **terms** (*array*): ([Potential]) Energy terms. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_energy.yml)
 ```python
@@ -1750,7 +1779,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_energy_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -1762,7 +1791,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_energy_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   terms:
@@ -1795,7 +1824,7 @@ gmx_energy --config config_gmx_energy.yml --input_energy_path energy.edr --outpu
       "Pressure"
     ],
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -1810,7 +1839,7 @@ gmx_energy --config config_gmx_energy.yml --input_energy_path energy.edr --outpu
       "Pressure"
     ],
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -1859,24 +1888,24 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **fit_selection** (*string*): (System) Group where the fitting will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **center_selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **cluster_selection** (*string*): (System) Group assigned to be the cluster, onto which all atoms are wrapped around the box, such that they are closest to the center of mass of the cluster, which is iteratively updated. If **input_index_path** provided, check the file for the accepted values. .
-* **output_selection** (*string*): (System) Group that is going to be written in the output trajectory. If **input_index_path** provided, check the file for the accepted values. .
-* **pbc** (*string*): (mol) PBC treatment (see help text for full description) . .
-* **center** (*boolean*): (True) Center atoms in box..
-* **ur** (*string*): (compact) Unit-cell representation. .
-* **fit** (*string*): (none) Fit molecule to ref structure in the structure file. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **fit_selection** (*string*): (System) Group where the fitting will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **center_selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **cluster_selection** (*string*): (System) Group assigned to be the cluster, onto which all atoms are wrapped around the box, such that they are closest to the center of mass of the cluster, which is iteratively updated. If **input_index_path** provided, check the file for the accepted values. 
+* **output_selection** (*string*): (System) Group that is going to be written in the output trajectory. If **input_index_path** provided, check the file for the accepted values. 
+* **pbc** (*string*): (mol) PBC treatment (see help text for full description) . 
+* **center** (*boolean*): (True) Center atoms in box.
+* **ur** (*string*): (compact) Unit-cell representation. 
+* **fit** (*string*): (none) Fit molecule to ref structure in the structure file. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_image.yml)
 ```python
@@ -1895,7 +1924,7 @@ properties:
 properties:
   center: true
   center_selection: System
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -1911,7 +1940,7 @@ properties:
 properties:
   center: true
   center_selection: System
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   fit: rot+trans
@@ -1952,7 +1981,7 @@ gmx_image --config config_gmx_image.yml --input_traj_path trajectory.trr --input
     "fit": "rot+trans",
     "ur": "compact",
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -1970,7 +1999,7 @@ gmx_image --config config_gmx_image.yml --input_traj_path trajectory.trr --input
     "fit": "rot+trans",
     "ur": "compact",
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2019,18 +2048,18 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **xvg** (*string*): (none) XVG plot formatting. .
-* **selection** (*string*): (System) Group where the rgyr will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **xvg** (*string*): (none) XVG plot formatting. 
+* **selection** (*string*): (System) Group where the rgyr will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rgyr.yml)
 ```python
@@ -2041,7 +2070,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rgyr_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -2051,7 +2080,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rgyr_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   selection: System
@@ -2076,7 +2105,7 @@ gmx_rgyr --config config_gmx_rgyr.yml --input_structure_path topology.tpr --inpu
   "properties": {
     "selection": "System",
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2088,7 +2117,7 @@ gmx_rgyr --config config_gmx_rgyr.yml --input_structure_path topology.tpr --inpu
   "properties": {
     "selection": "System",
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2137,18 +2166,18 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **xvg** (*string*): (none) XVG plot formatting. .
-* **selection** (*string*): (System) Group where the rms will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **xvg** (*string*): (none) XVG plot formatting. 
+* **selection** (*string*): (System) Group where the rms will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rms.yml)
 ```python
@@ -2159,7 +2188,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rms_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -2169,7 +2198,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rms_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   selection: System
@@ -2194,7 +2223,7 @@ gmx_rms --config config_gmx_rms.yml --input_structure_path topology.tpr --input_
   "properties": {
     "selection": "System",
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2206,7 +2235,7 @@ gmx_rms --config config_gmx_rms.yml --input_structure_path topology.tpr --input_
   "properties": {
     "selection": "System",
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2223,7 +2252,26 @@ Command:
 ```python
 gmx_rmsf -h
 ```
-    /bin/sh: 1: gmx_rmsf: not found
+    usage: gmx_rmsf [-h] [-c CONFIG] --input_structure_path INPUT_STRUCTURE_PATH --input_traj_path INPUT_TRAJ_PATH [--input_index_path INPUT_INDEX_PATH] -o OUTPUT_XVG_PATH
+    
+    Performs a Root Mean Square fluctuation (RMSF) analysis from a given GROMACS compatible trajectory.
+    
+    options:
+      -h, --help            show this help message and exit
+      -c CONFIG, --config CONFIG
+                            This file can be a YAML file, JSON file or JSON string
+    
+    required arguments:
+      --input_structure_path INPUT_STRUCTURE_PATH
+                            Path to the input structure file. Accepted formats: tpr, gro, g96, pdb, brk, ent.
+      --input_traj_path INPUT_TRAJ_PATH
+                            Path to the GROMACS trajectory file. Accepted formats: xtc, trr, cpt, gro, g96, pdb, tng.
+      -o OUTPUT_XVG_PATH, --output_xvg_path OUTPUT_XVG_PATH
+                            Path to the XVG output file. Accepted formats: xvg.
+    
+    optional arguments:
+      --input_index_path INPUT_INDEX_PATH
+                            Path to the GROMACS index file. Accepted formats: ndx.
 ### I / O Arguments
 Syntax: input_argument (datatype) : Definition
 
@@ -2236,59 +2284,41 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **xvg** (*string*): (none) XVG plot formatting. .
-* **selection** (*string*): (System) Group where the rmsf will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **xvg** (*string*): (none) XVG plot formatting. 
+* **selection** (*string*): (System) Group where the rmsf will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rmsf.yml)
 ```python
 properties:
-  bfactor: false
-  bin_width: 0.1
-  demean: true
-  hist: false
-  mass_weighted: false
-  nofit: false
   selection: System
 
 ```
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rmsf_docker.yml)
 ```python
 properties:
-  bfactor: false
-  bin_width: 0.1
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
-  demean: true
-  hist: false
-  mass_weighted: false
-  nofit: false
   selection: System
 
 ```
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_rmsf_singularity.yml)
 ```python
 properties:
-  bfactor: false
-  bin_width: 0.1
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
-  demean: true
-  hist: false
-  mass_weighted: false
-  nofit: false
   selection: System
 
 ```
@@ -2301,13 +2331,7 @@ gmx_rmsf --config config_gmx_rmsf.yml --input_structure_path topology.tpr --inpu
 ```python
 {
   "properties": {
-    "selection": "System",
-    "demean": true,
-    "mass_weighted": false,
-    "nofit": false,
-    "bfactor": false,
-    "bin_width": 0.1,
-    "hist": false
+    "selection": "System"
   }
 }
 ```
@@ -2316,14 +2340,8 @@ gmx_rmsf --config config_gmx_rmsf.yml --input_structure_path topology.tpr --inpu
 {
   "properties": {
     "selection": "System",
-    "demean": true,
-    "mass_weighted": false,
-    "nofit": false,
-    "bfactor": false,
-    "bin_width": 0.1,
-    "hist": false,
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2334,14 +2352,8 @@ gmx_rmsf --config config_gmx_rmsf.yml --input_structure_path topology.tpr --inpu
 {
   "properties": {
     "selection": "System",
-    "demean": true,
-    "mass_weighted": false,
-    "nofit": false,
-    "bfactor": false,
-    "bin_width": 0.1,
-    "hist": false,
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2390,21 +2402,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **pbc** (*string*): (mol) PBC treatment (see help text for full description) . .
-* **center** (*boolean*): (True) Center atoms in box..
-* **ur** (*string*): (compact) Unit-cell representation. .
-* **fit** (*string*): (none) Fit molecule to ref structure in the structure file. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **pbc** (*string*): (mol) PBC treatment (see help text for full description) . 
+* **center** (*boolean*): (True) Center atoms in box.
+* **ur** (*string*): (compact) Unit-cell representation. 
+* **fit** (*string*): (none) Fit molecule to ref structure in the structure file. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str.yml)
 ```python
@@ -2415,7 +2427,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -2425,7 +2437,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   selection: System
@@ -2450,7 +2462,7 @@ gmx_trjconv_str --config config_gmx_trjconv_str.yml --input_structure_path traje
   "properties": {
     "selection": "System",
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2462,7 +2474,7 @@ gmx_trjconv_str --config config_gmx_trjconv_str.yml --input_structure_path traje
   "properties": {
     "selection": "System",
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2511,23 +2523,23 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **skip** (*integer*): (1) Only write every nr-th frame..
-* **start** (*integer*): (0) Time of first frame to read from trajectory (default unit ps)..
-* **end** (*integer*): (0) Time of last frame to read from trajectory (default unit ps)..
-* **dt** (*integer*): (0) Only write frame when t MOD dt = first time (ps)..
-* **output_name** (*string*): (output) File name for ensemble of output files..
-* **output_type** (*string*): (pdb) File type for ensemble of output files. .
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **skip** (*integer*): (1) Only write every nr-th frame.
+* **start** (*integer*): (0) Time of first frame to read from trajectory (default unit ps).
+* **end** (*integer*): (0) Time of last frame to read from trajectory (default unit ps).
+* **dt** (*integer*): (0) Only write frame when t MOD dt = first time (ps).
+* **output_name** (*string*): (output) File name for ensemble of output files.
+* **output_type** (*string*): (pdb) File type for ensemble of output files. 
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str_ens.yml)
 ```python
@@ -2543,7 +2555,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str_ens_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -2558,7 +2570,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_str_ens_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   dt: 1
@@ -2598,7 +2610,7 @@ gmx_trjconv_str_ens --config config_gmx_trjconv_str_ens.yml --input_traj_path tr
     "output_name": "output",
     "output_type": "pdb",
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2615,7 +2627,7 @@ gmx_trjconv_str_ens --config config_gmx_trjconv_str_ens.yml --input_traj_path tr
     "output_name": "output",
     "output_type": "pdb",
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }
@@ -2664,20 +2676,21 @@ Config input / output arguments for this building block:
 Syntax: input_parameter (datatype) - (default_value) Definition
 
 Config parameters for this building block:
-* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. .
-* **start** (*integer*): (0) Time of first frame to read from trajectory (default unit ps)..
-* **end** (*integer*): (0) Time of last frame to read from trajectory (default unit ps)..
-* **dt** (*integer*): (0) Only write frame when t MOD dt = first time (ps)..
-* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary..
-* **remove_tmp** (*boolean*): (True) Remove temporal files..
-* **restart** (*boolean*): (False) Do not execute if output files exist..
-* **sandbox_path** (*string*): (./) Parent path to the sandbox directory..
-* **container_path** (*string*): (None) Container path definition..
-* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition..
-* **container_volume_path** (*string*): (/tmp) Container volume path definition..
-* **container_working_dir** (*string*): (None) Container working directory definition..
-* **container_user_id** (*string*): (None) Container user_id definition..
-* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container..
+* **selection** (*string*): (System) Group where the trjconv will be performed. If **input_index_path** provided, check the file for the accepted values. 
+* **start** (*integer*): (0) Time of first frame to read from trajectory (default unit ps).
+* **end** (*integer*): (0) Time of last frame to read from trajectory (default unit ps).
+* **dt** (*integer*): (0) Only write frame when t MOD dt = first time (ps).
+* **dump** (*integer*): (0) Dump frame nearest specified time (ps). If specified, overrides the -b, -e and -dt options.
+* **binary_path** (*string*): (gmx) Path to the GROMACS executable binary.
+* **remove_tmp** (*boolean*): (True) Remove temporal files.
+* **restart** (*boolean*): (False) Do not execute if output files exist.
+* **sandbox_path** (*string*): (./) Parent path to the sandbox directory.
+* **container_path** (*string*): (None) Container path definition.
+* **container_image** (*string*): (gromacs/gromacs:2022.2) Container image definition.
+* **container_volume_path** (*string*): (/tmp) Container volume path definition.
+* **container_working_dir** (*string*): (None) Container working directory definition.
+* **container_user_id** (*string*): (None) Container user_id definition.
+* **container_shell_path** (*string*): (/bin/bash) Path to default shell inside the container.
 ### YAML
 #### [Common config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_trj.yml)
 ```python
@@ -2691,7 +2704,7 @@ properties:
 #### [Docker config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_trj_docker.yml)
 ```python
 properties:
-  container_image: gromacs/gromacs:2022.2
+  container_image: quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: docker
   container_user_id: '1000'
   container_volume_path: /tmp
@@ -2704,7 +2717,7 @@ properties:
 #### [Singularity config file](https://github.com/bioexcel/biobb_analysis/blob/master/biobb_analysis/test/data/config/config_gmx_trjconv_trj_singularity.yml)
 ```python
 properties:
-  container_image: shub://michael-tn/gromacs
+  container_image: https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1
   container_path: singularity
   container_volume_path: /tmp
   dt: 0
@@ -2738,7 +2751,7 @@ gmx_trjconv_trj --config config_gmx_trjconv_trj.yml --input_traj_path trajectory
     "end": 0,
     "dt": 0,
     "container_path": "docker",
-    "container_image": "gromacs/gromacs:2022.2",
+    "container_image": "quay.io/biocontainers/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp",
     "container_user_id": "1000"
   }
@@ -2753,7 +2766,7 @@ gmx_trjconv_trj --config config_gmx_trjconv_trj.yml --input_traj_path trajectory
     "end": 0,
     "dt": 0,
     "container_path": "singularity",
-    "container_image": "shub://michael-tn/gromacs",
+    "container_image": "https://depot.galaxyproject.org/singularity/biobb_analysis:5.2.1--pyhdfd78af_1",
     "container_volume_path": "/tmp"
   }
 }

@@ -1,8 +1,2 @@
 properties:
-  bfactor: false
-  bin_width: 0.1
-  demean: true
-  hist: false
-  mass_weighted: false
-  nofit: false
   selection: System
